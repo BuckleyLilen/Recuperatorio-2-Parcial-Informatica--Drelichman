@@ -1,0 +1,337 @@
+/*=========================================
+ PRIMERA PARTE
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*=========================================
+ BODY
+=========================================*/
+
+body{
+
+    display:flex;
+    justify-content:center;
+    padding:2rem;
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+
+    /* fondo repetido */
+
+    background-image:url("../img/fondo.png");
+ background-repeat:repeat;
+    background-size:250px;
+    position:relative;
+
+}
+
+/* capa gris translúcida sobre el fondo */
+
+body::before{
+
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(45, 45, 45, 0.35);
+ z-index:0;
+}
+
+/*=========================================
+ BANNER
+=========================================*/
+
+/* mantiene la página por encima de la capa */
+
+.banner{
+
+    background-image:url("../img/anderson.jpg");
+   background-size:cover;
+background-position:center 15%;
+height:26rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-bottom:2rem;
+    position:relative;
+    overflow:hidden;
+    border:1px solid #555;
+
+}
+
+.banner::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(122, 122, 122, 0.45);
+
+}
+
+.banner h1,
+.banner p{
+
+    position:relative;
+    z-index:1;
+
+}
+
+.banner h1{
+
+    font-family:"Abel",sans-serif;
+    font-size:4rem;
+    letter-spacing:.4rem;
+    text-transform:uppercase;
+
+}
+
+.banner .subtitulo{
+
+    font-family:"Abel",sans-serif;
+    font-size:1.5rem;
+
+}
+
+/*=========================================
+ MENU
+=========================================*/
+
+nav{
+
+    margin-bottom:2rem;
+    border-top:2px solid #150798;
+    border-bottom:1px solid #555;
+    padding:1rem 0;
+
+}
+
+nav ul{
+
+    list-style:none;
+    display:flex;
+    justify-content:center;
+
+}
+
+nav li{
+
+    padding:0 2rem;
+    border-right:1px solid #777;
+
+}
+
+/* saca la línea del último elemento */
+
+nav li:last-child{
+
+    border-right:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:white;
+    font-family:"Abel",sans-serif;
+    font-size:1.2rem;
+    transition:.3s;
+
+}
+
+/*=========================================
+ TITULOS
+=========================================*/
+
+h2{
+
+    font-family:"Abel",sans-serif;
+    color:white;
+    font-size:2rem;
+    letter-spacing:.1rem;
+    margin-bottom:1rem;
+    border-left:4px solid #150798;
+    padding-left:1rem;
+
+}
+
+/*=========================================
+ PARRAFOS
+=========================================*/
+
+p{
+
+    line-height:1.8;
+    margin-bottom:1rem;
+    color:#ddd;
+
+}
+
+/*=========================================
+ BOTON
+=========================================*/
+
+button{
+
+    margin-top:1rem;
+    background:#111;
+    color:white;
+    border:1px solid #777;
+    padding:.8rem 1.5rem;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#150798;
+    border-color:#150798;
+
+}
+
+/*=========================================
+ FOOTER
+=========================================*/
+
+footer{
+
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    background:rgba(10,10,10,.9);
+    border-top:1px solid #555;
+    padding:1.5rem;
+
+}
+
+/* columna izquierda */
+
+.contacto-footer{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.8rem;
+
+}
+
+/* caja contacto */
+
+.contacto{
+
+    width:260px;
+    padding:1.5rem;
+    background:#111;
+    border:1px solid #150798;
+    text-align:center;
+
+}
+
+.contacto h3{
+
+    font-family:"Abel",sans-serif;
+    color:#ffffff;
+    letter-spacing:.2rem;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+
+}
+
+/* botón mail */
+
+.contacto a{
+
+    display:inline-block;
+    padding:.7rem 1.2rem;
+    background:#150798;
+    color:white;
+    text-decoration:none;
+    border:1px solid #150798;
+    transition:.3s;
+
+}
+
+.contacto a:hover{
+
+    background:white;
+    color:#150798;
+
+}
+
+/* copyright */
+
+.copyright{
+
+    color:#aaa;
+    font-size:.9rem;
+    text-align:center;
+
+}
+
+/* contenido footer */
+
+.info-footer{
+
+    flex:1;
+    text-align:center;
+
+}
+
+/*=========================================
+ CONTENEDOR GENERAL
+=========================================*/
+
+.contenedor{
+
+    width:90%;
+    max-width:1400px;
+    background:rgba(40,40,40,.92);
+    padding:2rem;
+    position:relative;
+    z-index:1;
+    border:1px solid #666;
+    box-shadow:0 0 30px rgba(0,0,0,.6);
+
+}
+
+/*=========================================
+ COLUMNAS
+=========================================*/
+
+.columnas{
+
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
+    margin-bottom:2rem;
+
+}
+
+/*=========================================
+ CAJAS
+=========================================*/
+
+article{
+
+    flex:1;
+    background:rgba(15,15,15,.85);
+    padding:2rem;
+    border:1px solid #666;
+    border-top:3px solid #150798;
+    min-width:0;
+
+}
+
+#andersonimagen{
+
+    width:100%;
+    margin-top:1.5rem;
+    border:1px solid #666;
+
+}
