@@ -69,6 +69,74 @@
 
             </section>
 
+            
+            
+            <!-- formulario-->
+            
+            <h1>Repositorio de grabaciones de Laurie Anderson</h1> 
+            
+            <!-- Cantidad de obras -->            
+            <form id="formCantidad"> 
+                <label for="cantidad"> Cantidad de obras: </label> 
+                <input type="number" id="cantidad" min="1" step="1" required > 
+                <button type="submit" id="btnCantidad"> Aceptar cantidad </button> 
+            </form>
+
+            <hr> 
+            
+            <!-- Datos de transferencia y costos --> 
+            
+            <form id="formDatosGenerales"> 
+                <h2>Datos generales</h2>
+                <label for="tiempoMB"> Tiempo de transferencia por MB (milisegundos): </label> 
+                <input type="number" id="tiempoMB" min="0.01" step="0.01" required disabled >
+                <br><br>
+                <label for="costoMB"> Costo mensual de almacenamiento por MB: </label> 
+                <input type="number" id="costoMB" min="0.01" step="0.01" required disabled > 
+                <br><br> 
+                <button type="submit" id="btnDatosGenerales" disabled> Aceptar datos generales </button> 
+            </form> 
+            <hr>
+ 
+            <!-- Carga de obras --> 
+            <form id="formObra"> 
+                <h2>Cargar obra</h2>
+                <p id="contador"> Obras cargadas: 0 </p>
+                <label for="nombreObra"> Nombre de la obra: </label> 
+                <input type="text" id="nombreObra" maxlength="100" required disabled > 
+                
+                <br><br>
+                
+                <label for="duracion"> Duración en minutos: </label>
+                <input type="number" id="duracion" min="0.01" step="0.01" required disabled > 
+                
+                <br><br>
+                
+                <label for="peso"> Peso del archivo (MB): </label> 
+                <input type="number" id="peso" min="0.01" step="0.01" required disabled >
+                
+                <br><br>
+                <button type="submit" id="btnObra" disabled> Cargar obra </button>
+            </form>
+
+            <hr> 
+
+            <!-- Resultados -->  
+            <section id="resultados"> 
+                <h2>Resultados</h2> 
+                <button id="btnDuracionTotal" disabled> Duración total </button>
+                <button id="btnDuracionPromedio" disabled> Duración promedio </button> 
+                <button id="btnMayorDuracion" disabled> Obra de mayor duración </button> 
+                <button id="btnPresupuesto" disabled> Presupuesto anual </button>
+                <div id="resultado"></div> 
+            </section> 
+            <hr> 
+            
+            <!-- Reiniciar --> 
+            <button id="btnReiniciar" disabled> Reiniciar </button>
+
+                
+
         </main>
 
        <!--Pie de página-->
@@ -95,6 +163,7 @@
 
     <!--Link al JS-->
     <script src="js/obras.js"></script>
+    <script src="js/ejercicio"></script>
 
 </body>
 
